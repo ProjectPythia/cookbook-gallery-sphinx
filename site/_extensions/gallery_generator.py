@@ -59,36 +59,22 @@ def generate_repo_dicts(all_items):
         github_url = f"https://github.com/ProjectPythia/{repo}"
         cookbook_url = f"https://projectpythia.org/{repo}/"
 
-        try:
-            citation_url = f"https://raw.githubusercontent.com/ProjectPythia/{repo}/main/CITATION.cff"
-            cffconvert_command = f"cffconvert -f zenodo -u {citation_url}"
-            citation_dict = _run_cffconvert(cffconvert_command)
+        citation_url = f"https://raw.githubusercontent.com/ProjectPythia/{repo}/main/CITATION.cff"
+        cffconvert_command = f"cffconvert -f zenodo -u {citation_url}"
+        citation_dict = _run_cffconvert(cffconvert_command)
 
-            cookbook_title = citation_dict["title"]
-            description = citation_dict["description"]
-            creators = citation_dict["creators"]
-            names = [_make_standard_name(creator.get("name")) for creator in creators]
-            authors = ", ".join(names)
+        cookbook_title = citation_dict["title"]
+        description = citation_dict["description"]
+        creators = citation_dict["creators"]
+        names = [_make_standard_name(creator.get("name")) for creator in creators]
+        authors = ", ".join(names)
 
-            gallery_info_url = f"https://raw.githubusercontent.com/ProjectPythia/{repo}/main/_gallery_info.yml"
-            gallery_info_dict = yaml.safe_load(requests.get(gallery_info_url).content)
-            thumbnail = gallery_info_dict["thumbnail"]
-            tag_dict = {
-                k: v for k, v in gallery_info_dict["tags"].items() if (v is not None and v[0] is not None)
-            }
-
-        except:
-            config_url = f"https://raw.githubusercontent.com/ProjectPythia/{repo}/main/_config.yml"
-            config = requests.get(config_url).content
-            config_dict = yaml.safe_load(config)
-
-            cookbook_title = config_dict["title"]
-            description = config_dict["description"]
-            authors = config_dict["author"]
-            thumbnail = config_dict["thumbnail"]
-            tag_dict = {
-                k: v for k, v in config_dict["tags"].items() if (v is not None and v[0] is not None)
-            }
+        gallery_info_url = f"https://raw.githubusercontent.com/ProjectPythia/{repo}/main/_gallery_info.yml"
+        gallery_info_dict = yaml.safe_load(requests.get(gallery_info_url).content)
+        thumbnail = gallery_info_dict["thumbnail"]
+        tag_dict = {
+            k: v for k, v in gallery_info_dict["tags"].items() if (v is not None and v[0] is not None)
+        }
 
         repo_dict = {
             "repo": repo,
