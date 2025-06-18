@@ -2,15 +2,15 @@
 # Cookbooks Gallery
 
 
-Pythia Cookbooks provide example workflows on more advanced and domain-specific problems developed by the Pythia community. Cookbooks build on top of skills you learn in [Pythia Foundations](https://foundations.projectpythia.org/).
+Pythia Cookbooks provide example workflows on more advanced and domain-specific problems developed by the Pythia community. Cookbooks build on top of skills you learn in [Pythia Foundations](https://foundations.projectpythia.org/landing-page.html).
 
-Cookbooks are created from Jupyter Notebooks that we strive to binderize so each Cookbook can be [executed in the cloud with a single click from your browser](https://foundations.projectpythia.org/preamble/how-to-use#interacting-with-jupyter-notebooks-in-the-cloud-via-binder), but in some instances executing a Cookbook will require [running the notebooks locally](https://foundations.projectpythia.org/preamble/how-to-use#interacting-with-jupyter-books-locally).
+Cookbooks are created from Jupyter Notebooks that we strive to binderize so each Cookbook can be [executed in the cloud with a single click from your browser](https://foundations.projectpythia.org/preamble/how-to-use.html#interacting-with-jupyter-notebooks-in-the-cloud-via-binder), but in some instances executing a Cookbook will require [running the notebooks locally](https://foundations.projectpythia.org/preamble/how-to-use.html#interacting-with-jupyter-books-locally).
 
-Interested in contributing a new Cookbook or contributing to an existing Cookbook? Great! Please see the [Project Pythia Cookbook Contributor's Guide](https://projectpythia.org/cookbook-guide), and consider opening a discussion under the [Project Pythia category of the Pangeo Discourse](https://discourse.pangeo.io/c/education/project-pythia/60).
+Interested in contributing a new Cookbook or contributing to an existing Cookbook? Great! Please see the [Project Pythia Cookbook Contributor's Guide](https://projectpythia.org/cookbook-guide.html), and consider opening a discussion under the [Project Pythia category of the Pangeo Discourse](https://discourse.pangeo.io/c/education/project-pythia/60).
 
 <div class="d-sm-flex mt-3 mb-4">
 <div class="d-flex gallery-menu">
-<div><a role="button" class="btn btn-primary btn-sm mx-1" href=https://projectpythia.org/cookbook-guide>How can I create a new Cookbook?</a></div>
+<div><a role="button" class="btn btn-primary btn-sm mx-1" href=https://projectpythia.org/cookbook-guide.html>How can I create a new Cookbook?</a></div>
 </div>
 <div class="ml-auto d-flex">
 <div><button class="btn btn-link btn-sm mx-1" onclick="clearCbs()">Clear all filters</button></div>
