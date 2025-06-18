@@ -1,12 +1,9 @@
-name: pythia-tutorial-dev
+name: pythia-gallery
 channels:
 - conda-forge
-- nodefaults
 dependencies:
 - cffconvert
-- matplotlib
 - myst-nb
-- pandas
 - pre-commit
 - pyyaml
 - sphinx-pythia-theme

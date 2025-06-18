@@ -11,7 +11,6 @@ jobs:
     uses: ProjectPythia/cookbook-actions/.github/workflows/build-book.yaml@main
     with:
       environment_file: 'environment.yml'
-      environment_name: pythia-tutorial-dev
       path_to_notebooks: 'site'
       build_command: 'make -j4 html'
 
